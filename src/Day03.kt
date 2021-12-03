@@ -44,7 +44,7 @@ fun main() {
         var CO2Rating = ""
 
         var oxyRatingList = input.map { it }.toMutableList()
-        var CO2RatingList = input.map { it }.toMutableList()
+        var co2ratingList = input.map { it }.toMutableList()
 
         var oxyFound = false
         var co2Found = false
@@ -64,13 +64,13 @@ fun main() {
                 } else x1 += 1
             }
 
-            val common2 = mostFrequent(rebuildList(CO2RatingList)[colI])
+            val common2 = mostFrequent(rebuildList(co2ratingList)[colI])
             var x2 = 0
-            while (x2 < CO2RatingList.size && !co2Found) {
-                if (CO2RatingList[x2][colI] == common2) {
-                    CO2RatingList.removeAt(x2)
-                    if (CO2RatingList.size == 1) {
-                        CO2Rating = CO2RatingList[0]
+            while (x2 < co2ratingList.size && !co2Found) {
+                if (co2ratingList[x2][colI] == common2) {
+                    co2ratingList.removeAt(x2)
+                    if (co2ratingList.size == 1) {
+                        CO2Rating = co2ratingList[0]
                         co2Found = true
                         break
                     }
