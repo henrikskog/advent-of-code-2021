@@ -77,7 +77,7 @@ fun main() {
                 } else x2 += 1
             }
 
-            if(oxyFound && co2Found) break
+            if (oxyFound && co2Found) break
         }
 
         val a1 = Integer.parseInt(oxyRating, 2)
