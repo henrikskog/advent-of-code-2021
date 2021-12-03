@@ -1,7 +1,7 @@
 fun main() {
     fun mostFrequent(str: String): Char {
-        var a = str.count { it == '1' }
-        var b = str.count { it == '0' }
+        val a = str.count { it == '1' }
+        val b = str.count { it == '0' }
         return if (a >= b) '1' else '0'
     }
 
@@ -33,18 +33,18 @@ fun main() {
         println(flippedList)
         println(gammaRate)
 
-        var epsilonRate = gammaRate.replace("0", "x").replace("1", "0").replace("x", "1");
-        var a1 = Integer.parseInt(epsilonRate, 2)
-        var a2 = Integer.parseInt(gammaRate, 2)
+        val epsilonRate = gammaRate.replace("0", "x").replace("1", "0").replace("x", "1")
+        val a1 = Integer.parseInt(epsilonRate, 2)
+        val a2 = Integer.parseInt(gammaRate, 2)
         return a1 * a2
     }
 
     fun part2(input: List<String>): Int {
         var oxyRating = ""
-        var CO2Rating = ""
+        var co2Rating = ""
 
-        var oxyRatingList = input.map { it }.toMutableList()
-        var co2ratingList = input.map { it }.toMutableList()
+        val oxyRatingList = input.map { it }.toMutableList()
+        val co2ratingList = input.map { it }.toMutableList()
 
         var oxyFound = false
         var co2Found = false
@@ -70,7 +70,7 @@ fun main() {
                 if (co2ratingList[x2][colI] == common2) {
                     co2ratingList.removeAt(x2)
                     if (co2ratingList.size == 1) {
-                        CO2Rating = co2ratingList[0]
+                        co2Rating = co2ratingList[0]
                         co2Found = true
                         break
                     }
@@ -80,8 +80,8 @@ fun main() {
             if(oxyFound && co2Found) break
         }
 
-        var a1 = Integer.parseInt(oxyRating, 2)
-        var a2 = Integer.parseInt(CO2Rating, 2)
+        val a1 = Integer.parseInt(oxyRating, 2)
+        val a2 = Integer.parseInt(co2Rating, 2)
         println(a1)
         println(a2)
         return a1 * a2
